@@ -1,0 +1,110 @@
+DROP TABLE MEMBER CASCADE CONSTRAINTS;
+DROP TABLE PLAN CASCADE CONSTRAINTS;
+DROP TABLE DAILY_LOG CASCADE CONSTRAINTS;
+DROP TABLE NUTRITION CASCADE CONSTRAINTS;
+DROP TABLE WORKOUT CASCADE CONSTRAINTS;
+DROP TABLE EXERCISE CASCADE CONSTRAINTS;
+DROP TABLE MUSCLE CASCADE CONSTRAINTS;
+DROP TABLE DIET CASCADE CONSTRAINTS;
+
+Prompt ******  Creating PLAN table ....
+
+CREATE TABLE PLAN (
+	plan_id NUMBER(4) CONSTRAINT plan_id_pk PRIMARY KEY,
+	type VARCHAR2(10),
+	purpose VARCHAR2(30),
+	duration VARCHAR2(30)
+);
+
+
+Prompt ******  Creating MEMBER table ....
+
+CREATE TABLE MEMBER (
+	member_id NUMBER(4) CONSTRAINT member_id_pk PRIMARY KEY,
+	username varchar2(30),
+	password varchar2(30) NOT NULL,
+	plan_id NUMBER(4),
+	name VARCHAR2(30),
+	age NUMBER(4),
+	gender VARCHAR2(10),
+	weight NUMBER(4),
+	phone_no VARCHAR2(30),
+	address VARCHAR2(30),
+	BMI  NUMBER(5,2),
+CONSTRAINT member_un_uk UNIQUE(username),
+CONSTRAINT member_planid_fk FOREIGN KEY (plan_id) REFERENCES PLAN(plan_id)
+);
+
+
+
+
+
+Prompt ******  Creating DAILY_LOG table ....
+
+
+CREATE TABLE DAILY_LOG (
+	log_no NUMBER(4) CONSTRAINT dailylog_log_pk PRIMARY KEY,
+	member_id NUMBER(4),
+	c_date VARCHAR2(15) NOT NULL,
+CONSTRAINT dailylog_mid_fk FOREIGN KEY (member_id) REFERENCES MEMBER(member_id)
+);
+
+
+Prompt ******  Creating NUTRITION table ....
+
+CREATE TABLE NUTRITION (
+	plan_id NUMBER(4),
+	vitamin_intake VARCHAR2(10),
+	fat_intake VARCHAR2(10),
+	carbohydrate_intake VARCHAR2(10),
+	protein_intake VARCHAR2(10),
+	total_calories VARCHAR(10),
+CONSTRAINT nutrition_planid_fk FOREIGN KEY (plan_id) REFERENCES PLAN(plan_id)
+);
+
+
+Prompt ******  Creating WORKOUT table ....
+CREATE TABLE WORKOUT (
+	workout_id NUMBER(4) CONSTRAINT workout_id_pk PRIMARY KEY,
+	plan_id NUMBER(4),
+	targeted_muscles VARCHAR2(30),
+	workout_days NUMBER(4),
+	workout_time VARCHAR(20),
+CONSTRAINT workout_planid_fk FOREIGN KEY (plan_id) REFERENCES PLAN(plan_id)
+);
+
+
+Prompt ******  Creating EXERCISE table ....
+
+
+CREATE TABLE EXERCISE(
+	workout_id NUMBER(4) ,
+	name VARCHAR(30),
+	equipment VARCHAR2(30),
+	total_reps NUMBER(4),
+CONSTRAINT exercise_wid_fk FOREIGN KEY (workout_id) REFERENCES WORKOUT(workout_id)
+);
+
+Prompt ******  Creating MUSCLE table ....
+
+
+CREATE TABLE MUSCLE (
+	log_no NUMBER(4),
+	muscle_change VARCHAR2(20),
+	weight_change VARCHAR(20),
+	bmi_change NUMBER(5,2),
+CONSTRAINT muscle_lno_fk FOREIGN KEY (log_no) REFERENCES DAILY_LOG(log_no)
+);
+
+
+Prompt ******  Creating DIET table ...
+
+CREATE TABLE DIET (
+	log_no NUMBER(4),
+	food_type VARCHAR(10),
+	fat VARCHAR(10),
+	carbohydrate VARCHAR(10),
+	protein VARCHAR(10),
+	total_calories VARCHAR(10),
+CONSTRAINT diet_lno_fk FOREIGN KEY (log_no) REFERENCES DAILY_LOG(log_no)
+);

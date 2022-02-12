@@ -1,0 +1,80 @@
+insert into PLAN VALUES(1,'standard','lose weight',9000,'90 days');
+insert into PLAN VALUES(2,'standard','gain weight',6000,'60 days');
+insert into PLAN VALUES(3,'standard','maintain weight',3000,'30 days');
+
+insert into MEMBER VALUES(1,'harveyspectre','1234',1,'Harvey Spectre',35,'m',75, '+011234559603' ,'Pearson Spectre',23.5);
+insert into MEMBER VALUES(2,'michealross','1234',2,'Micheal Ross',25,'m',65,'+011999859603','Pearson Hardman',20.5);
+insert into MEMBER VALUES(3,'louislitt','1234',1,'Louis Litt',33,'m',85,'+011238990603','Pearson Litt',25.5);
+insert into MEMBER VALUES(4,'rachelzane','1234',2,'Rachel Zane',33,'f',55,'+065595590603','Pearson Hardman',19.0);
+
+
+
+insert into NUTRITION VALUES(1,'300 IU','100 IU','500 IU','200 IU','1000 kcal');
+insert into NUTRITION VALUES(2,'500 IU','500 IU','800 IU','400 IU','2200 kcal');
+insert into NUTRITION VALUES(3,'400 IU','300 IU','700 IU','300 IU','1700 kcal');
+
+insert into WORKOUT VALUES(1,1,'chest',75,'1 hour/day');
+insert into WORKOUT VALUES(2,1,'leg',50,'1 hour/day');
+insert into WORKOUT VALUES(3,1,'biceps',75,'1 hour/day');
+
+insert into WORKOUT VALUES(4,2,'chest',20,'1/2 hour/day');
+insert into WORKOUT VALUES(5,2,'leg',30,'1/2 hour/day');
+insert into WORKOUT VALUES(6,2,'biceps',40,'1/2 hour/day');
+
+insert into WORKOUT VALUES(7,3,'chest',10,'1/2 hour/day');
+insert into WORKOUT VALUES(8,3,'leg',5,'1/2 hour/day');
+insert into WORKOUT VALUES(9,3,'biceps',15,'1/2 hour/day');
+
+insert into EXERCISE VALUES(1,'pushups','exercise mat(optional)',25);
+insert into EXERCISE VALUES(1,'incline dumbell curl','dumbells',25);
+insert into EXERCISE VALUES(2,'squats','weights(optional)',25);
+insert into EXERCISE VALUES(3,'chin-ups','bar',25);
+
+insert into EXERCISE VALUES(4,'pushups','exercise mat(optional)',10);
+insert into EXERCISE VALUES(4,'incline dumbell curl','dumbells',10);
+insert into EXERCISE VALUES(5,'squats','weights(optional)',10);
+insert into EXERCISE VALUES(6,'chin-ups','bar',10);
+
+insert into EXERCISE VALUES(7,'pushups','exercise mat(optional)',15);
+insert into EXERCISE VALUES(7,'incline dumbell curl','dumbells',15);
+insert into EXERCISE VALUES(8,'squats','weights(optional)',15);
+insert into EXERCISE VALUES(9,'chin-ups','bar',15);
+
+insert into DAILY_LOG VALUES(1,1,'06/11/2021');
+insert into DAILY_LOG VALUES(2,1,'07/11/2021');
+insert into DAILY_LOG VALUES(3,1,'08/11/2021');
+
+insert into DAILY_LOG VALUES(4,2,'06/11/2021');
+insert into DAILY_LOG VALUES(5,2,'07/11/2021');
+insert into DAILY_LOG VALUES(6,2,'08/11/2021');
+
+insert into DAILY_LOG VALUES(7,3,'06/11/2021');
+insert into DAILY_LOG VALUES(8,3,'07/11/2021');
+insert into DAILY_LOG VALUES(9,3,'08/11/2021');
+
+
+insert into MUSCLE VALUES(1,'no change','no change', 0.0);
+insert into MUSCLE VALUES(2,'01 cm inc','0.4 kg loss', 0.1);
+insert into MUSCLE VALUES(3,'01 cm inc','0.2 kg gain', 0.0);
+
+insert into MUSCLE VALUES(4,'no change','no change', 0.0);
+insert into MUSCLE VALUES(5,'01 cm inc','0.4 kg gain', 0.1);
+insert into MUSCLE VALUES(6,'01 cm inc','0.2 kg gain', 0.0);
+
+insert into MUSCLE VALUES(7,'no change','no change', 0.0);
+insert into MUSCLE VALUES(8,'01 cm inc','0.3 kg gain', 0.1);
+insert into MUSCLE VALUES(9,'01 cm dec','0.2 kg gain', 0.0);
+
+
+insert into DIET VALUES(1,'fish','150 IU','400 IU','100 IU','650 kcal');
+insert into DIET VALUES(2,'beef','290 IU','400 IU','100 IU','790 kcal');
+insert into DIET VALUES(3,'chicken','150 IU','400 IU','340 IU','890 kcal');
+
+insert into DIET VALUES(4,'fish','150 IU','400 IU','100 IU','650 kcal');
+insert into DIET VALUES(5,'beef','290 IU','400 IU','100 IU','790 kcal');
+insert into DIET VALUES(6,'chicken','150 IU','400 IU','340 IU','890 kcal');
+
+insert into DIET VALUES(7,'fish','150 IU','400 IU','100 IU','650 kcal');
+insert into DIET VALUES(8,'beef','290 IU','400 IU','100 IU','790 kcal');
+insert into DIET VALUES(9,'chicken','150 IU','400 IU','340 IU','890 kcal');
+
